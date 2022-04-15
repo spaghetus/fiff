@@ -1,0 +1,83 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in library 'fiff'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--lib",
+					"--package=fiff"
+				],
+				"filter": {
+					"name": "fiff",
+					"kind": "lib"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'fiff'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=fiff",
+					"--package=fiff"
+				],
+				"filter": {
+					"name": "fiff",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'fiff'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=fiff",
+					"--package=fiff"
+				],
+				"filter": {
+					"name": "fiff",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug integration test 'decode'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--test=decode",
+					"--package=fiff"
+				],
+				"filter": {
+					"name": "decode",
+					"kind": "test"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		}
+	]
+}

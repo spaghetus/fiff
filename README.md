@@ -1,0 +1,1 @@
+a parser for a friend's silly image format
